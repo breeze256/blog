@@ -21,7 +21,7 @@ jobs:
         nix_path: nixpkgs=channel:nixos-24.11 # Nixpkgs 版本
 
     - name: Build Site # 使用 Nix 构建 Hugo
-      run: nix run .#build
+      run: nix develop --command bash -c "nix run .#build"
 
     - name: Upload Pages Artifact # 上传 Pages Artifact
       uses: actions/upload-pages-artifact@v3

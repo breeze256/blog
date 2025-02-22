@@ -21,8 +21,8 @@
           shellHook = ''
             echo "✨ Welcome to the breeze256's blog development shell! ✨"
             echo "Commands available:"
-            echo "  - nix run .#serve:  Start Hugo development server with live reload."
-            echo "  - nix run .#build:  Build the production version of the blog."
+            echo "  - nix run .#serve: Start Hugo development server with live reload."
+            echo "  - nix run .#build: Build the production version of the blog."
           '';
         };
         
@@ -46,7 +46,7 @@
             #!/usr/bin/env bash
             set -euo pipefail
 
-            echo " Hugo development server starting with live reload... "
+            echo "Hugo development server starting with live reload... "
             # Hugo 内置 Live Reload 功能
             hugo server --bind=0.0.0.0 --baseURL=http://localhost:1313 --disableFastRender --watch
             echo " Hugo development server stopped. "
@@ -56,9 +56,9 @@
             #!/usr/bin/env bash
             set -euo pipefail
 
-            echo " Building production version of the Hugo blog... "
+            echo "Building production version of the Hugo blog... "
             hugo "$@"
-            echo " Production build completed! 🎉"
+            echo "Production build completed! 🎉"
           '';
         };
       });
