@@ -1,9 +1,11 @@
 name: Deploy Hugo to GitHub Pages
 
 on:
+  # 推送到 master 分支时触发
   push:
-    branches: [ "master" ] # 推送到 master 分支时触发
-  workflow_dispatch: # 允许手动触发
+    branches: [ "master" ]
+  # 允许手动触发
+  workflow_dispatch: 
 
 jobs:
   build: # 构建网站任务
