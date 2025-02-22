@@ -57,7 +57,7 @@
             set -euo pipefail
 
             echo "Building production version of the Hugo blog... "
-            hugo "$@"
+            hugo "$@" --minify
             echo "Production build completed! 🎉"
           '';
         };

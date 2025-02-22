@@ -1,18 +1,39 @@
 baseURL = "https://breeze256.is-local.org/blog/"
-title = "Geekblog"
+title = "breeze256's blog"
 theme = "hugo-geekblog"
 
 pluralizeListTitles = false
 
-# Geekblog required configuration
+# Geekblog 必需的配置选项
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 disablePathToLower = true
 
-# Needed for mermaid shortcodes
+# 语言设置
+defaultContentLanguage = 'zh-CN'
+[languages]
+  [languages.zh-cn]
+    weight = 0
+    disabled = false
+    languageCode = 'zh-CN'
+    languageName = '简体中文'
+    hasCJKLanguage = true
+
+# Params
+[params]
+  subtitle = "Keep thinking, keep alive (ゝ∀･)"
+  math = true
+
+# Mermaid shortcodes 必需的配置
 [markup]
   [markup.goldmark.renderer]
     unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 9
@@ -42,3 +63,6 @@ disablePathToLower = true
   section = ["HTML"]
   taxonomy = ["HTML"]
   term = ["HTML", "ATOM"]
+
+[minify]
+  disableHTML = true
