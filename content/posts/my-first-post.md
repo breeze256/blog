@@ -33,5 +33,5 @@ sequenceDiagram
 {{< /mermaid >}}
 
 $$
-\int_a^b x^2 \ \text{d}x
+\int_a^b x^2 \ \text{d}x = \dfrac{1}{3}x^3
 $$
