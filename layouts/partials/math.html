@@ -1,9 +1,19 @@
 <script id="MathJax-script" async src="https://s4.zstatic.net/ajax/libs/mathjax/4.0.0-beta.7/tex-chtml.min.js"></script>
 <script>
   MathJax = {
+    options: {
+      enableMenu: false,
+      a11y: {
+        speech: false,
+        braille: false,
+        subtitles: false,
+        viewBraille: false,
+      }
+    },
     tex: {
       displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
-      inlineMath: [['\\(', '\\)']]                  // inline
+      inlineMath: [['\\(', '\\)']],                 // inline
+      tags: 'ams' // 使用 AMS 风格的公式编号
     },
     loader:{
       load: ['ui/safe']

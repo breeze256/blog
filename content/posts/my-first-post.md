@@ -2,8 +2,10 @@
 title: "我的第一篇帖子"
 date: 2019-12-16T21:38:04+08:00
 tags: 
-  - untagged
+  - 开发日志
 ---
+
+这是我的第一篇帖子！
 
 Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor 
 volutpat. Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Praesent sapien 
@@ -32,6 +34,11 @@ sequenceDiagram
     end
 {{< /mermaid >}}
 
+写点 LaTeX 公式吧：
+
 $$
-\int_a^b x^2 \ \text{d}x = \dfrac{1}{3}x^3
+\int_a^b x^2 \ \text{d}x = \dfrac{1}{3}x^3 \\
+\frac{\epsilon s}{4k\pi d} = C
 $$
+
+下周再说 uwu
