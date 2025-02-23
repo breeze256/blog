@@ -29,7 +29,13 @@ jobs:
       uses: actions/upload-pages-artifact@v3
       with:
         path: ./public
-
+    - name: Sync files to FTP Server
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.ftp_server }}
+        username: blog_breeze256
+        password: ${{ secrets.ftp_password }}
+        local-dir: "./public/"
   deploy: # 部署网站任务
     needs: build
     permissions:
@@ -45,9 +51,4 @@ jobs:
       id: deployment
       uses: actions/deploy-pages@v4
     
-    - name: Sync files to FTP Server
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.ftp_server }}
-        username: blog_breeze256
-        password: ${{ secrets.ftp_password }}
+
