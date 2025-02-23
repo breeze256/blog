@@ -1,4 +1,4 @@
-baseURL = "http://blog.breeze256.ltd"
+baseURL = "https://blog.breeze256.ltd"
 title = "breeze256's blog"
 theme = "hugo-geekblog"
 
