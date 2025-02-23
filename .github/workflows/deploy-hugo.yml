@@ -11,24 +11,26 @@ jobs:
   build: # 构建网站任务
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Repository # 检出代码
+    # 检出代码
+    - name: Checkout Repository
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         submodules: false # 如果使用 Git Submodules，改为 true 或 recursive
-
-    - name: Install Nix # 安装 Nix
+    # 安装 Nix
+    - name: Install Nix
       uses: cachix/install-nix-action@v27
       with:
         nix_path: nixpkgs=channel:nixos-24.11 # Nixpkgs 版本
-
-    - name: Build Site # 使用 Nix 构建 Hugo
+    # 使用 Nix 构建 Hugo
+    - name: Build Site
       run: nix develop --command bash -c "nix run .#build"
-
-    - name: Upload Pages Artifact # 上传 Pages Artifact
+    # 上传 Pages Artifact
+    - name: Upload Pages Artifact
       uses: actions/upload-pages-artifact@v3
       with:
         path: ./public
+    # 同步到 FTP 服务器
     - name: Sync files to FTP Server
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
