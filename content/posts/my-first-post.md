@@ -41,4 +41,8 @@ $$
 \frac{\epsilon s}{4k\pi d} = C
 $$
 
+行内公式：根据 $\epsilon = 2\pi$ 得知:
+- $a + b = c$
+- $2a - b = d$
+
 下周再说 uwu
