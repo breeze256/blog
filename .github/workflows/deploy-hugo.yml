@@ -36,19 +36,3 @@ jobs:
         username: blog_breeze256
         password: ${{ secrets.ftp_password }}
         local-dir: "./public/"
-  deploy: # 部署网站任务
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-    steps:
-    - name: Deploy to GitHub Pages # 部署到 GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
-    
-
