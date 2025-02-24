@@ -1,7 +1,7 @@
 ---
 title: "喜欢的音乐"
 date: 2025-02-24
-tags: [Journal, Music]
+tags: [Journal, Daily]
 ---
 
 本人也算个音乐迷吧，一天离不开耳机 qwq，比较喜欢纯音乐啦（小时候特别迷 C418 哈哈哈）。

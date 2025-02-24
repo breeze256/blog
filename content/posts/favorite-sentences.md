@@ -1,7 +1,7 @@
 ---
 title: "喜欢的句子"
 date: 2025-02-24
-tags: [Journal, Literature]
+tags: [Journal, Daily]
 ---
 
 嘿嘿，是我比较喜欢的一些句子啦：
