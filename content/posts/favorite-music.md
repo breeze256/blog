@@ -8,7 +8,6 @@ tags: [Journal, Daily]
 
 下面是一些我比较喜欢的音乐啦，音源来自 Spotify，希望大家也能喜欢。
 
-
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1i32Eo90a0CsgPw9Xm6dOy?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 好听，充满希望的感觉。
