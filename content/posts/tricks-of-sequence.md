@@ -10,6 +10,18 @@ tags: [Math, Notes]
 
 <!--more-->
 
+## $a_{n+1} = pa_n+q$ 型
+
+1. 令 $a_{n+1} = a_n = x$，得到 $x = px+q$，
+    $$
+    a_{n+1} = pa_n+q \Rightarrow x = px+q
+    $$
+2. 解出这个方程，并在原递推公式两边同时减去 $x$，构造出等比数列 $\{a_n-x\}$，
+    $$
+    a_{n+1}-x = pa_n+q-x \Rightarrow a_{n+1}-x = p(a_n+\frac{q-x}{p})
+    $$
+3. 求出 $\{a_n-x\}$ 通项公式，即可求出 $\{a_n\}$ 通项公式。
+
 ## $a_{n+1} = \frac{p}{\lambda a_n + q}$ 型
 
 1. 等式两边同时加上一个常数 $x$，对右侧进行通分，
