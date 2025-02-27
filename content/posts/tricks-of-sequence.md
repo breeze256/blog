@@ -38,9 +38,13 @@ tags: [Math, Notes]
     $$
     a_{n+1}-x = \frac{pa_n+q}{ra_n+s}-x \Rightarrow \frac{1}{a_{n+1}-x} = \frac{ra_n+s}{(p-xr)\left(a_n-x\right)}
     $$
-3. 列出方程组，做商并解出 $a_n$，
+3. 列出方程组，做商并解出 $a_n$。
     $$
-    
+    \begin{cases}
+        \dfrac{1}{a_{n+1}-x_1} = \dfrac{ra_n+s}{(p-x_1r)\left(a_n-x_1\right)} \\
+        \dfrac{1}{a_{n+1}-x_2} = \dfrac{ra_n+s}{(p-x_2r)\left(a_n-x_2\right)}
+    \end{cases},
+    \Rightarrow a_n = \dots
     $$
 
 <!--
