@@ -10,6 +10,7 @@ tags: [Math, Notes]
 
 <!--more-->
 
+<!--
 ## $a_{n+1} = pa_n+q$ 型
 
 1. 令 $a_{n+1} = a_n = x$，得到 $x = px+q$，
@@ -22,6 +23,27 @@ tags: [Math, Notes]
     $$
 3. 求出 $\{a_n-x\}$ 通项公式，即可求出 $\{a_n\}$ 通项公式。
 
+-->
+
+## $a_{n+1} = \frac{pa_n+q}{ra_n+s}$ 型
+
+- **定义1**：方程 $x = f(x)$ 的解 $x$ 称为函数 $f(x)$ 的不动点。
+- **定义2**：递推数列 $a_{n+1} = \frac{pa_n+q}{ra_n+s}, bc\neq0$ 对应的特征方程为 $x = \frac{px+q}{rx+s}$，该方程的解为 $f(x) = \frac{pa_n+q}{ra_n+s}$ 不动点。
+
+1. 写出数列特征方程，并解出不动点 $x$，
+    $$
+    a_{n+1} = \frac{pa_n+q}{ra_n+s} \Rightarrow x = \frac{px+q}{rx+s} \Rightarrow x = \dots
+    $$
+2. 在原数列左右两边同时减去 $x$, 并取倒数，
+    $$
+    a_{n+1}-x = \frac{pa_n+q}{ra_n+s}-x \Rightarrow \frac{1}{a_{n+1}-x} = \frac{ra_n+s}{(p-xr)\left(a_n-x\right)}
+    $$
+3. 列出方程组，做商并解出 $a_n$，
+    $$
+    
+    $$
+
+<!--
 ## $a_{n+1} = \frac{p}{\lambda a_n + q}$ 型
 
 1. 等式两边同时加上一个常数 $x$，对右侧进行通分，
@@ -52,3 +74,4 @@ $$
 $$
 \frac{1}{a_n+2} = \frac{1}{6}\left(-\frac{1}{2}\right)^n+\frac{1}{3}, a_n = \frac{6}{\left(-\frac{1}{2}\right)^n+2}-2.
 $$
+-->
