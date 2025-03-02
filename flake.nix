@@ -48,7 +48,7 @@
 
             echo "Hugo development server starting with live reload... "
             # Hugo 内置 Live Reload 功能
-            hugo server --bind=0.0.0.0 --baseURL=http://localhost:1313 --disableFastRender --watch
+            hugo server --bind=0.0.0.0 --baseURL=http://localhost:1313 --disableFastRender --watch --buildDrafts
             echo " Hugo development server stopped. "
           '';
 

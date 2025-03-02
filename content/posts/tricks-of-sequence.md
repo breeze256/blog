@@ -1,5 +1,6 @@
 ---
 date: '2025-02-25T04:44:28Z'
+draft: true
 title: '常见数列的一些技巧'
 tags: [Math, Notes]
 ---
