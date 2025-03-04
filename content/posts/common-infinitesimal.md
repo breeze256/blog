@@ -14,4 +14,3 @@ tags: [Math, Notes]
 - $a^x-1 \sim x\ln a$（$a>0$，且$a \neq 1$）,
 - $(1+x)^\alpha-1 \sim \alpha x$（$\alpha \neq 0$）.
 
-## 当 $x \to \infty$ 时
