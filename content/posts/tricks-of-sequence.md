@@ -2,7 +2,8 @@
 date: '2025-02-25T04:44:28Z'
 draft: true
 title: '常见数列的一些技巧'
-tags: [Math, Notes]
+tags: [高中数学, 笔记, 数列]
+categories: [数学]
 ---
 
 一个比较零散的笔记，会把一些比较难想到的数列的技巧记录过来（嘿嘿）。

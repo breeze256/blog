@@ -35,6 +35,15 @@ enableEmoji = true
   filename = 'sitemap.xml'
   priority = 0.5
 
+[params]
+  math = true
+
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['\[', '\]'], ['$$', '$$']]
+    inline = [['\(', '\)']]
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
