@@ -53,8 +53,9 @@
   weight = 30
 
 [[main]]
-  pre = "github"
-  url = "https://github.com/breeze256"
+  pre = "rss"
+  name = "RSS"
+  url = "/index.xml"
   weight = 40
 
 
