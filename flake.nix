@@ -23,6 +23,7 @@
             echo "Commands available:"
             echo "  - nix run .#serve: Start Hugo development server with live reload."
             echo "  - nix run .#build: Build the production version of the blog."
+            echo "  - nix run .#update: Update the blowfish theme to the latest version."
           '';
         };
         
@@ -38,6 +39,11 @@
             type = "app";
             program = "${self.packages.${system}.hugo-build}/bin/hugo-build";
             description = "Build the production version of the blog.";
+          };
+          update = {
+            type = "app";
+            program = "${self.packages.${system}.blowfish-update}/bin/blowfish-update";
+            description = "Update the blowfish theme to the latest version.";
           };
         };
 
@@ -59,6 +65,30 @@
             echo "Building production version of the Hugo blog... "
             hugo "$@" --minify
             echo "Production build completed! 🎉"
+          '';
+
+          blowfish-update = pkgs.writeShellScriptBin "blowfish-update" ''
+            #!/usr/bin/env bash
+
+            echo "Updating blowfish theme to the latest version..."
+            mkdir -p "./themes/blowfish"
+            API_URL="https://api.github.com/repos/nunocoracao/blowfish/releases/latest"
+
+            RELEASE_INFO=$(curl -s "$API_URL")
+            TARBALL_URL=$(echo "$RELEASE_INFO" | jq -r '.tarball_url')
+
+            if [[ -z "$TARBALL_URL" ]]; then
+                echo "Error: Could not find tar.gz release source code."
+                exit 1
+            fi
+
+            FILENAME=$(basename "$TARBALL_URL")
+            ARCHIVE_FILE="$FILENAME"
+
+            curl -L -o "$ARCHIVE_FILE" "$TARBALL_URL" || { echo "Error: Download failed."; exit 1; }
+            tar --strip-components=1 -xzf "$ARCHIVE_FILE" -C "./themes/blowfish" || { echo "Error: Extraction failed."; exit 1; }
+            rm "$ARCHIVE_FILE" || echo "Warning: Delete archive failed."
+            echo "The theme was updated successfully! 🎉"
           '';
         };
       });

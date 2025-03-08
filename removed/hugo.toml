@@ -1,0 +1,68 @@
+baseURL = "https://blog.breeze256.ltd"
+title = "breeze256's blog"
+theme = "blowfish"
+
+pluralizeListTitles = false
+
+# Geekblog 必需的配置选项
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+disablePathToLower = true
+
+# 语言设置
+defaultContentLanguage = 'zh-CN'
+[languages]
+  [languages.zh-cn]
+    weight = 0
+    disabled = false
+    languageCode = 'zh-CN'
+    languageName = '简体中文'
+    hasCJKLanguage = true
+
+# Params
+[params]
+  subtitle = "Keep thinking, keep alive (ゝ∀･)"
+  math = true
+
+# Mermaid shortcodes 必需的配置
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 9
+
+[taxonomies]
+  author = "authors"
+  tag = "tags"
+
+[mediaTypes]
+  [mediaTypes."application/atom+xml"]
+    suffixes = ["xml"]
+
+[outputFormats]
+  [outputFormats.Atom]
+    name = "Atom"
+    mediaType = "application/atom+xml"
+    baseName = "feed"
+    isPlainText = false
+    rel = "alternate"
+    isHTML = false
+    noUgly = true
+    permalinkable = false
+
+[outputs]
+  home = ["HTML", "ATOM"]
+  page = ["HTML"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML", "ATOM"]
+
+[minify]
+  disableHTML = true
