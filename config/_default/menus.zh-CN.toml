@@ -10,16 +10,17 @@
 # overridden by providing a weight value. The menu will then be
 # ordered by weight from lowest to highest.
 
-[[main]]
-  pre = "circle-info"
-  name = "关于"
-  pageRef = "about"
-  weight = 10
 
 [[main]]
   pre = "blog"
   name = "帖子"
   pageRef = "posts"
+  weight = 10
+
+[[main]]
+  pre = "message"
+  name = "说说"
+  pageRef = "talks"
   weight = 20
 
 #[[main]]
@@ -73,6 +74,11 @@
   url = "/index.xml"
   weight = 40
 
+[[footer]]
+  pre = "circle-info"
+  name = "关于"
+  pageRef = "about"
+  weight = 10
 
 # [[footer]]
 #   name = "Tags"
