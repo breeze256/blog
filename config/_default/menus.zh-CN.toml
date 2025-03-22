@@ -72,13 +72,19 @@
   pre = "rss"
   name = "RSS"
   url = "/index.xml"
-  weight = 40
+  weight = 10
+
+[[footer]]
+  pre = "link"
+  name = "友链"
+  pageRef = "links"
+  weight = 20
 
 [[footer]]
   pre = "circle-info"
   name = "关于"
   pageRef = "about"
-  weight = 10
+  weight = 30
 
 # [[footer]]
 #   name = "Tags"
