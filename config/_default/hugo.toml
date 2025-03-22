@@ -16,6 +16,9 @@ buildFuture = false
 
 enableEmoji = true
 
+# Add summary settings.
+summaryLength = 120
+
 # googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
