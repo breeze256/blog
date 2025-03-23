@@ -6,11 +6,11 @@
 # https://blowfish.page/docs/configuration/#theme-parameters
 
 colorScheme = "Slate"
-defaultAppearance = "light" # valid options: light or dark
+defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = true
 
 enableSearch = true
-enableCodeCopy = false
+enableCodeCopy = true
 
 replyByEmail = false
 
